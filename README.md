@@ -34,3 +34,7 @@ npm install
 ```bash
 node --watch app.js
 ```
+
+# Credits
+
+[The Odin Project](https://www.theodinproject.com/)
