@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <%- include('partials/error.ejs') %>
+    <form
+      action="/create"
+      method="POST"
+      style="display: flex; flex-direction: column; gap: 0.5rem; width: 15%; margin-bottom: 1rem"
+    >
+      <label for="firstName">First Name: </label>
+      <input type="text" name="firstName" id="firstName" required />
+
+      <label for="lastName">Last Name: </label>
+      <input type="text" name="lastName" id="lastName" required />
+
+      <label for="email">Email: </label>
+      <input type="email" name="email" id="email" required />
+
+      <label for="age">Age: </label>
+      <input type="number" name="age" id="age" />
+
+      <label for="bio">Bio: </label>
+      <textarea type="text" name="bio" id="bio" placeholder="Enter bio here"></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+    <a href="/">Back to home</a>
+  </body>
+</html>

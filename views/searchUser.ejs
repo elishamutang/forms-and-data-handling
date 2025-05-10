@@ -1,0 +1,26 @@
+<!-- Assignment -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <%- include('partials/error.ejs') %>
+    <ul>
+        <!-- prettier ignore -->
+        <% if(locals.users) {%>
+            <p><%= users.length %> result(s) found!</p>
+            <% users.forEach((user) => {%>
+                <li>ID: <%= user.id %>, Name: <%= user.firstName %> <%= user.lastName %></li>
+                <li>Email: <%= user.email %>, Age: <%= user.age ? user.age : "N/A" %></li>
+                <li>Bio: <%= user.bio ? user.bio : "N/A" %></li>
+            <% }) %>
+        <% } %>
+
+    </ul>
+    <a href="/">Back to home</a>
+  </body>
+</html>
